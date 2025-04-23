@@ -1,33 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Browse from './pages/browse'
+import OutletDetails from './pages/OutletDetails'
+import CityDetails from './pages/CityDetails'
+import BookOutlet from './pages/BookOutlet'
+import SuccessBooking from './pages/SuccessBooking'
+import CheckBooking from './pages/CheckBooking'
+
+// Import all CSS files for the application
+import "./css/bootstrap.min.css";
+import "./css/style.css";
+import "./css/responsive.css";
+import "./css/flaticon.css";
+import "./css/menu.css";
+import "./css/magnific-popup.css";
+import "./css/owl.carousel.min.css";
+import "./css/owl.theme.default.min.css";
+import "./css/jquery.datetimepicker.min.css";
+import "./css/flexslider.css";
+import "./css/browse.page.css";
+import "./css/modern-styles.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <BrowserRouter>
+         <Routes>
+             <Route path="/" element={<Browse />} />
+             <Route path="/outlet/:slug" element={<OutletDetails />} />
+             <Route path="/outlet/:slug/book" element={<BookOutlet />} />
+             <Route path="/city/:slug" element={<CityDetails />} />
+             <Route path="/success-booking" element={<SuccessBooking />} />
+             <Route path="/check-booking" element={<CheckBooking />} />
+         </Routes>
+      </BrowserRouter>
     </>
   )
 }

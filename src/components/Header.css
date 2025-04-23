@@ -1,0 +1,233 @@
+/* Additional Header Component Styling */
+.header {
+  position: relative;
+  z-index: 1000;
+}
+
+.header-transparent {
+  position: absolute;
+  width: 100%;
+}
+
+.navik-header {
+  background-color: transparent;
+}
+
+.navik-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.navik-header.sticky .navik-menu ul li a {
+  color: #333;
+}
+
+.navik-header.sticky .logo img {
+  max-height: 50px;
+}
+
+.navik-header.sticky .line-menu {
+  background-color: #333;
+}
+
+.navik-header .container {
+  position: relative;
+}
+
+.navik-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo {
+  padding: 0;
+  z-index: 100;
+}
+
+.logo img {
+  max-height: 60px;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger-menu {
+  position: relative;
+  display: none;
+  cursor: pointer;
+  width: 25px;
+  height: 20px;
+  z-index: 100;
+}
+
+.line-menu {
+  position: absolute;
+  background-color: #fff;
+  height: 3px;
+  width: 100%;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.line-menu.first-line {
+  top: 0;
+}
+
+.line-menu:nth-child(2) {
+  top: 8px;
+}
+
+.line-menu.last-line {
+  bottom: 0;
+}
+
+/* Menu open state */
+.line-menu.first-line.open {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+.line-menu.open:nth-child(2) {
+  opacity: 0;
+}
+
+.line-menu.last-line.open {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+.navik-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navik-menu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navik-menu ul li {
+  position: relative;
+  margin: 0 12px;
+}
+
+.navik-menu ul li a {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 0;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.navik-menu ul li a:hover {
+  color: #f5c51d;
+}
+
+.navik-menu ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.navik-menu ul li:hover > ul {
+  display: flex;
+}
+
+.navik-menu ul li ul li {
+  margin: 0;
+}
+
+.navik-menu ul li ul li a {
+  color: #333;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.navik-menu ul li ul li a:hover {
+  background-color: #f5f5f5;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .navik-menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 280px;
+    height: 100vh;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 60px 0 30px;
+    transition: left 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 90;
+  }
+  
+  .navik-menu.menu-open {
+    left: 0;
+  }
+  
+  .navik-menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .navik-menu ul li {
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .navik-menu ul li a {
+    color: #333;
+    padding: 12px 15px;
+  }
+  
+  .navik-menu ul li ul {
+    position: relative;
+    display: none;
+    box-shadow: none;
+    width: 100%;
+  }
+  
+  .navik-menu ul li.submenu-open > ul {
+    display: flex;
+  }
+  
+  .burger-menu {
+    display: block;
+  }
+  
+  /* Overlay for mobile menu */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 80;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+} 

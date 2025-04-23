@@ -1,0 +1,311 @@
+/* 
+==============================================
+    MODERN STYLES - BAKMI BANGKA ASLI 17
+==============================================
+*/
+
+:root {
+    --primary-color: #417505;
+    --secondary-color: #8B4513;
+    --accent-color: #e84e1d;
+    --text-color: #283034;
+    --light-gray: #f6f9fa;
+    --medium-gray: #eaeaea;
+    --dark-gray: #777;
+    --white: #fff;
+    --border-radius: 12px;
+    --box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    --transition: all 0.3s ease;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* ===== COMPONENTS ===== */
+
+/* Cards */
+.modern-card {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    background-color: var(--white);
+    border: none;
+    overflow: hidden;
+}
+
+.modern-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn-modern {
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    border: none;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.btn-accent:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--text-color);
+    color: var(--white);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Badges */
+.badge-modern {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+.badge-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.badge-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.badge-accent {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+/* Feature Items */
+.feature-item {
+    transition: var(--transition);
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.feature-item:hover {
+    background-color: var(--light-gray);
+    transform: translateY(-5px);
+}
+
+/* Forms */
+.form-control, .input-group-text {
+    padding: 0.75rem 1rem;
+    border-radius: 50px;
+    border: 2px solid #dee2e6;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(65, 117, 5, 0.25);
+}
+
+.input-group > .form-control {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Section Title */
+.section-heading {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    position: relative;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Gallery */
+.gallery-swiper {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--primary-color);
+}
+
+/* Map */
+.map-container {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+/* Price Tag */
+.price-tag {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Banner */
+.banner-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+}
+
+/* Contact Card */
+.contact-card {
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Nav */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* ===== UTILITIES ===== */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color) !important;
+}
+
+.text-accent {
+    color: var(--accent-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
+.bg-accent {
+    background-color: var(--accent-color) !important;
+}
+
+.bg-light {
+    background-color: var(--light-gray) !important;
+}
+
+.border-light {
+    border-color: rgba(0,0,0,0.1) !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .main-container, .form-container {
+        flex-direction: column;
+    }
+    
+    .details-card, .price-card, .contact-card, .booking-card, .order-card {
+        width: 100% !important;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-heading {
+        font-size: 1.5rem;
+    }
+    
+    .price-tag {
+        font-size: 1.75rem;
+    }
+} 

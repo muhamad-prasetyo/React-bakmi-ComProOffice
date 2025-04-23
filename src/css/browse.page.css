@@ -1,0 +1,124 @@
+
+
+		.title-underline {
+			width: 80px;
+			height: 3px;
+			background-color: #8B4513;
+			margin: 0 auto 30px;
+		}
+		
+		.promo-card-gm {
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+			margin-bottom: 30px;
+			background-color: #fff;
+			transition: all 0.3s ease;
+			height: 100%;
+		}
+		
+		.promo-card-gm:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+		}
+		
+		.promo-img-container {
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.promo-img {
+			width: 100%;
+			height: 220px;
+			object-fit: cover;
+			transition: transform 0.5s ease;
+		}
+		
+		.promo-card-gm:hover .promo-img {
+			transform: scale(1.05);
+		}
+		
+		.promo-badge {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			background-color: #417505;
+			color: white;
+			font-weight: bold;
+			padding: 5px 10px;
+			font-size: 12px;
+			border-radius: 4px;
+		}
+		
+		.promo-badge-red {
+			background-color: #d9534f;
+		}
+		
+		.promo-content {
+			padding: 20px;
+		}
+		
+		.promo-title-gm {
+			color: #8B4513;
+			margin-bottom: 10px;
+			font-weight: 600;
+		}
+		
+		.promo-desc {
+			color: #666;
+			font-size: 14px;
+			margin-bottom: 15px;
+			min-height: 40px;
+		}
+		
+		.promo-price {
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		
+		.old-price {
+			text-decoration: line-through;
+			color: #999;
+			margin-right: 10px;
+		}
+		
+		.new-price {
+			color: #d9534f;
+			font-size: 18px;
+		}
+		
+		.promo-period {
+			color: #777;
+			font-size: 12px;
+			border-top: 1px solid #eee;
+			padding-top: 10px;
+		}
+		
+		.promo-period i {
+			margin-right: 5px;
+		}
+		
+		.carousel-indicators [data-bs-target] {
+			background-color: #8B4513;
+		}
+		
+		.btn-red {
+			background-color: #d9534f;
+			color: white;
+			border: 2px solid #d9534f;
+			padding: 10px 25px;
+			font-weight: 600;
+			border-radius: 4px;
+		}
+		
+		.btn-red:hover, .tra-red-hover:hover {
+			background-color: transparent;
+			color: #d9534f;
+			border: 2px solid #d9534f;
+		}
+		
+		@media (max-width: 767px) {
+			.promo-desc {
+				min-height: auto;
+			}
+		}
