@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 /* ==========================================================================
   01. GENERAL & BASIC STYLES
   =========================================================================== */
@@ -4079,9 +4085,7 @@ span.ico-holder {
 } 
 
 .brand-logo img {
-  visibility: visible !important;
-  opacity: 1 !important;
-  
+  opacity: .7;
 } 
 
 #brands-1 .owl-dots {

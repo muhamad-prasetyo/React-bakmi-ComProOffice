@@ -1,0 +1,88 @@
+/* 
+ * ImageViewer Component Styles
+ * Styling untuk komponen yang menampilkan gambar dalam ukuran penuh
+ */
+
+/* Overlay background - menutupi seluruh halaman */
+.image-viewer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s;
+}
+
+/* Gambar di dalam viewer */
+.image-viewer-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+  border-radius: 4px;
+}
+
+/* Tombol close */
+.image-viewer-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #e00000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  z-index: 10001;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effect untuk tombol close */
+.image-viewer-close-button:hover {
+  background: #ff3333;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Effect saat tombol ditekan */
+.image-viewer-close-button:active {
+  transform: scale(0.95);
+}
+
+/* Animation untuk showing the viewer */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Prevent body scrolling when viewer is open */
+body.image-viewer-open {
+  overflow: hidden;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 576px) {
+  .image-viewer-close-button {
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .image-viewer-image {
+    max-width: 95%;
+    max-height: 95%;
+  }
+} 

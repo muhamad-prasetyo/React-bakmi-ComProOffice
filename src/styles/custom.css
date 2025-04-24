@@ -1,0 +1,193 @@
+/**
+ * Custom CSS fixes specific to Bakmi Bangka Asli 17 website
+ */
+
+/* Logo fixes */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.logo img {
+  max-height: 60px !important;
+  width: auto !important;
+  display: block !important;
+}
+
+.footer-logo img {
+  max-height: 80px !important;
+  width: auto !important;
+  display: block !important;
+}
+
+/* Header fixes */
+.header.navik-header {
+  position: relative;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.navik-header-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Fix for header transparency */
+.header-transparent {
+  position: absolute;
+  width: 100%;
+  background-color: transparent !important;
+}
+
+.header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Menu fixes */
+.navik-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navik-menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navik-menu ul.top-list {
+  margin-right: 20px;
+}
+
+.navik-menu ul li {
+  position: relative;
+}
+
+.navik-menu ul li a {
+  display: block;
+  padding: 20px 15px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navik-menu ul li a:hover {
+  color: #F5B017;
+}
+
+.navik-menu ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: none;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.navik-menu ul li:hover > ul {
+  display: block;
+}
+
+.navik-menu ul li ul li a {
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Slider fixes */
+.slider, .slides {
+  height: 600px !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider .slides li {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.slider .slides li.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slider .slides li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive fixes */
+@media (max-width: 991px) {
+  .navik-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    padding-top: 60px;
+  }
+  
+  .menu-open .navik-menu {
+    right: 0;
+  }
+  
+  .navik-menu ul, 
+  .navik-menu ul.top-list {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .navik-menu ul li ul {
+    position: static;
+    box-shadow: none;
+    display: none;
+    width: 100%;
+  }
+  
+  .navik-menu ul li.submenu-open > ul {
+    display: block;
+  }
+  
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .logo img {
+    max-height: 50px !important;
+  }
+} 

@@ -1,0 +1,95 @@
+/* Custom Slider Indicators */
+
+.slider-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.slider-indicators .indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-indicators .indicator.active {
+  background-color: #FFCC00;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slider-indicators {
+    bottom: 20px;
+  }
+  
+  .slider-indicators .indicator {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
+  
+  .slider-indicators .indicator.active {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Custom slider styling */
+.custom-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-slider .slides {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+  position: relative;
+}
+
+.custom-slider .slides li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 1;
+}
+
+.custom-slider .slides li.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.custom-slider .slides li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-slider .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+} 

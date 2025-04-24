@@ -1,0 +1,66 @@
+/* 
+ * ScrollToTop Component Styles
+ * Styling untuk tombol kembali ke atas halaman
+ */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #e00000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  
+  /* Default state: hidden unless .show class is added */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  
+  /* Ensures the button is on top of other content */
+  pointer-events: none;
+}
+
+.scroll-to-top svg {
+  fill: white;
+  width: 32px;
+  height: 32px;
+}
+
+/* Visible state - applied when .show class is added */
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Hover effects */
+.scroll-to-top:hover {
+  background-color: #c00000;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Active state (when clicked) */
+.scroll-to-top:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 576px) {
+  .scroll-to-top {
+    height: 50px;
+    width: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+} 
